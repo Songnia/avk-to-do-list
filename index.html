@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff"/>
+  <title>Ma Liste de Tâches</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.json" />
+  <!-- Icône pour iOS -->
+  <link rel="apple-touch-icon" href="icons/icon-192x192.png"> 
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Mes Tâches</h1>
+    </header>
+    <main>
+      <form id="task-form">
+        <input type="text" id="new-task-input" placeholder="Ajouter une nouvelle tâche..." aria-label="Nouvelle tâche" required />
+        <button type="submit" aria-label="Ajouter la tâche">Ajouter</button>
+      </form>
+      <ul id="task-list" aria-live="polite"></ul>
+    </main>
+     <footer>
+        <p>Application To-Do List Simple</p>
+    </footer>
+  </div>
+
+  <!-- Template pour les éléments de tâche -->
+  <template id="task-item-template">
+      <li class="task-item">
+          <span class="task-text"></span>
+          <div class="task-actions">
+              <button class="edit-btn" aria-label="Modifier la tâche">Modifier</button>
+              <button class="delete-btn" aria-label="Supprimer la tâche">Supprimer</button>
+              <button class="complete-btn" aria-label="Marquer comme terminée">Terminé</button>
+          </div>
+      </li>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
